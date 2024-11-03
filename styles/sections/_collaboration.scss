@@ -1,0 +1,154 @@
+.collaboration {
+	margin-bottom: 21rem;
+	&__title {
+		@include title;
+		margin-bottom: 6rem;
+	}
+
+	&__container {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: stretch;
+	}
+
+	&__buttons {
+		padding-inline: 4.3rem;
+		display: flex;
+		justify-content: stretch;
+		align-items: center;
+		gap: 2.4rem;
+
+		@media (max-width: 768px) {
+			display: none;
+		}
+
+		label {
+			border-top-left-radius: 2.3rem;
+			border-top-right-radius: 2.3rem;
+			text-wrap: nowrap;
+			flex: 1;
+			cursor: pointer;
+			padding-block: 2.4rem;
+			background-color: $c-accent;
+			font-size: 2.8rem;
+			font-family: $f-title;
+			text-align: center;
+			transition: all 0.1s ease-in-out;
+
+			&:hover {
+				opacity: 0.8;
+			}
+
+			input {
+				display: none;
+			}
+		}
+	}
+
+	&__label_active {
+		background-color: $c-darkgray !important;
+	}
+
+	&__content {
+		background-color: $c-darkgray;
+		border-radius: 2.3rem;
+		padding: 13.5rem 5.1rem;
+
+		@media (max-width: 768px) {
+			padding: 8rem 5.1rem;
+		}
+
+		&_slider {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			gap: 2rem;
+			margin-bottom: 6.4rem;
+
+			@media (min-width: 768px) {
+				display: none;
+			}
+		}
+
+		&_slide {
+			padding: 1rem;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			background: none;
+			border: none;
+			transform: scale(2);
+
+			border-radius: 0.8rem;
+
+			transition: 0.1s ease-in-out;
+
+			&:active {
+				background-color: $c-gray;
+			}
+		}
+
+		&_name {
+			text-align: center;
+			font-family: $f-title;
+			font-size: 4.8rem;
+		}
+
+		&_title {
+			font-family: $f-title;
+			font-size: 3.2rem;
+			margin-bottom: 7.5rem;
+
+			@media (max-width: 768px) {
+				font-size: 4.8rem;
+			}
+		}
+
+		&_grid {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 6rem;
+
+			@media (max-width: 768px) {
+				grid-template-columns: 1fr;
+			}
+		}
+
+		&_item {
+			border-left: 0.2rem solid $c-accent;
+			p {
+				padding-left: 2rem;
+				font-size: 2.8rem;
+
+				@media (max-width: 768px) {
+					font-size: 3.6rem;
+				}
+			}
+		}
+	}
+
+	&__effect {
+		position: absolute;
+		border-radius: 100%;
+		background-color: $c-white;
+		filter: blur(11.31rem);
+		opacity: 0.1;
+
+		&_1 {
+			top: 9.1rem;
+			left: 26.9rem;
+			width: 41.6rem;
+			height: 41.6rem;
+		}
+
+		&_2 {
+			bottom: 6.3rem;
+			right: 16.4rem;
+			width: 35.2rem;
+			height: 35.2rem;
+		}
+	}
+}

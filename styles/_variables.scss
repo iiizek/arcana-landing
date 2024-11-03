@@ -1,0 +1,58 @@
+@import './_fonts.scss';
+
+// colors
+$c-gradient: -webkit-linear-gradient(
+	-77deg,
+	#bfbcbc 0%,
+	#dfdfdf 34%,
+	#ffffff 54%,
+	#bfbcbc 100%
+);
+$c-bg: #03060b;
+$c-accent: #ed4448;
+$c-lightgray: #c1c1c1;
+$c-gray: #555555;
+$c-darkgray: #1c1c1c;
+$c-border-select: #2d2d2d;
+$c-white: #fff;
+$c-darkblue: #0b0b11;
+
+// fonts
+$f-btn: 'Play', sans-serif;
+$f-title: 'SF Pro Display', sans-serif;
+$f-text: 'SF Pro Text', sans-serif;
+
+// mixins
+@mixin gradient-text {
+	background: $c-gradient;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+@mixin btn($color) {
+	font-family: $f-btn;
+	font-size: 2.155rem;
+	padding: 2.4rem 2.85rem;
+	border-radius: 0.8rem;
+	background-color: $color;
+	transition: all 0.2s ease-in-out;
+
+	&:hover {
+		cursor: pointer;
+		opacity: 0.8;
+	}
+
+	@media (max-width: 768px) {
+		font-size: 3rem;
+	}
+}
+
+@mixin title {
+	font-family: $f-title;
+	font-size: 6.4rem;
+	@include gradient-text;
+
+	@media (max-width: 768px) {
+		text-align: center;
+	}
+}

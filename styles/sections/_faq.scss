@@ -1,0 +1,80 @@
+.faq {
+	margin-bottom: 21rem;
+
+	&__title {
+		@include title;
+		margin-bottom: 7.5rem;
+	}
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: stretch;
+		gap: 3rem;
+	}
+
+	&__item {
+		padding-inline: 2rem;
+		transition: all 0.1s ease-in-out;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		gap: 3rem;
+		padding-block: 3rem;
+		border-bottom: 0.1rem solid rgba($c-lightgray, 0.3);
+
+		&:hover {
+			cursor: pointer;
+			background: rgba(#fff, 0.1);
+		}
+
+		&_active {
+			&:hover {
+				cursor: default;
+				background: none;
+			}
+		}
+
+		&_title {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			gap: 1.6rem;
+
+			p {
+				font-family: $f-title;
+				font-size: 3.6rem;
+
+				@media (max-width: 768px) {
+					font-size: 4.2rem;
+				}
+			}
+
+			object {
+				width: 6.4rem;
+				height: 6.4rem;
+			}
+		}
+
+		&_text {
+			display: none;
+			font-size: 3rem;
+			padding-right: 18rem;
+			padding-block: 2rem;
+
+			@media (max-width: 768px) {
+				font-size: 3.6rem;
+				padding-right: 8rem;
+			}
+
+			&_active {
+				display: block;
+			}
+		}
+	}
+}
+
+.faq-icon-active {
+	display: none;
+}

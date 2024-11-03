@@ -1,0 +1,133 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	color: #fff;
+	list-style: none;
+	text-decoration: none;
+
+	scrollbar-color: $c-accent $c-darkgray;
+	scrollbar-width: auto;
+	-webkit-tap-highlight-color: transparent;
+}
+
+html {
+	scroll-behavior: smooth;
+	font-size: 0.521vw; //0.521vw = 10px = 1rem
+
+	@media (min-width: 2000px) {
+		font-size: 0.4vw;
+	}
+
+	@media (max-width: 768px) {
+		font-size: 1.4vw;
+	}
+
+	line-height: 1.15;
+	-webkit-text-size-adjust: 100%; // Исправление масштабирования шрифтов в iOS
+
+	@media (max-width: 768px) {
+		overflow-x: hidden;
+	}
+}
+
+body {
+	background-color: $c-bg;
+	margin: 0;
+	font-family: $f-text;
+	font-weight: 300;
+	overflow-x: hidden;
+
+	.bg-image {
+		position: absolute;
+		z-index: -100;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+}
+
+main {
+	display: block;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	font-family: inherit;
+	margin: 0;
+}
+
+button,
+input {
+	overflow: visible;
+}
+
+button,
+select {
+	text-transform: none;
+}
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+	-webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
+	border-style: none;
+	padding: 0;
+}
+
+button:-moz-focusring,
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring {
+	outline: 1px dotted ButtonText;
+}
+
+textarea {
+	overflow: auto;
+}
+
+[type='checkbox'],
+[type='radio'] {
+	box-sizing: border-box;
+	padding: 0;
+}
+
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
+	height: auto;
+}
+
+[type='search'] {
+	-webkit-appearance: textfield;
+	outline-offset: -2px;
+}
+
+[type='search']::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+	-webkit-appearance: button;
+	font: inherit;
+}
+
+[hidden] {
+	display: none;
+}

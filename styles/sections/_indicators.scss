@@ -1,0 +1,70 @@
+.indicators {
+	margin-bottom: 12rem;
+
+	@media (max-width: 768px) {
+		margin-bottom: 18rem;
+	}
+	&__title {
+		@include title;
+		margin-bottom: 7.5rem;
+
+		@media (max-width: 768px) {
+			text-align: center;
+		}
+	}
+
+	&__container {
+		display: flex;
+		justify-content: space-around;
+		align-items: stretch;
+
+		@media (max-width: 768px) {
+			justify-content: stretch;
+			align-items: stretch;
+			gap: 3rem;
+			flex-direction: column;
+		}
+	}
+
+	&__divider {
+		width: 0.2rem;
+		background-color: $c-accent;
+
+		@media (max-width: 768px) {
+			border-radius: 1rem;
+			width: 40%;
+			margin: 0 auto;
+			height: 0.75rem;
+			margin-block: 4rem;
+		}
+	}
+
+	&__item {
+		flex: 1;
+		display: flex;
+		height: 18rem;
+		justify-content: space-around;
+		align-items: center;
+		flex-direction: column;
+
+		@media (max-width: 768px) {
+			gap: 2rem;
+		}
+
+		h3 {
+			font-family: $f-title;
+			font-size: 6rem;
+			color: $c-white;
+		}
+
+		p {
+			text-align: center;
+			font-size: 2rem;
+
+			@media (max-width: 768px) {
+				font-size: 3rem;
+				max-width: 70%;
+			}
+		}
+	}
+}

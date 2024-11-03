@@ -1,0 +1,257 @@
+.calculator {
+	margin-bottom: 21rem;
+	padding: 5.8rem 4.55rem;
+	background-color: $c-darkblue;
+	border-radius: 1.2rem;
+
+	@media (max-width: 768px) {
+		margin-bottom: 18rem;
+	}
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: stretch;
+		gap: 5.2rem;
+
+		@media (max-width: 768px) {
+			justify-content: stretch;
+			align-items: stretch;
+			flex-direction: column;
+		}
+	}
+
+	&__left {
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 6.4rem;
+
+		@media (max-width: 768px) {
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
+	&__title {
+		@include title;
+	}
+
+	&__select {
+		display: flex;
+		flex-direction: column;
+		gap: 1.1rem;
+		align-items: start;
+		justify-content: flex-start;
+
+		@media (max-width: 768px) {
+			align-items: center;
+			gap: 2rem;
+			width: 100%;
+		}
+
+		&_label {
+			margin-left: 2.3rem;
+			font-family: $f-title;
+			font-size: 1.6rem;
+			color: $c-gray;
+			text-transform: uppercase;
+
+			@media (max-width: 768px) {
+				font-size: 2.4rem;
+			}
+		}
+
+		&_container {
+			cursor: pointer;
+			width: 43.2rem;
+			border-radius: 1rem;
+			border: 0.2rem solid $c-border-select;
+			padding: 1.75rem 2.3rem;
+			transition: 0.1s ease-in-out;
+
+			@media (max-width: 768px) {
+				width: 100%;
+			}
+
+			&:hover {
+				border: 0.2rem solid $c-gray;
+			}
+		}
+
+		&_body {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		&_active {
+			font-family: $f-title;
+			font-size: 2.8rem;
+
+			@media (max-width: 768px) {
+				font-size: 4.4rem;
+			}
+		}
+
+		&_list {
+			display: none;
+			flex-direction: column;
+			align-items: start;
+			justify-content: flex-start;
+		}
+
+		&_opened {
+			display: flex;
+		}
+
+		&_option {
+			transition: 0.1s ease-in-out;
+			width: 100%;
+			font-family: $f-title;
+			font-size: 2.8rem;
+			padding-top: 1.9rem;
+
+			@media (max-width: 768px) {
+				font-size: 4.4rem;
+				padding-top: 3rem;
+			}
+
+			&:hover {
+				color: $c-accent;
+			}
+		}
+	}
+
+	&__range {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 1.1rem;
+		margin-block: 4rem;
+		&_value {
+			width: 100%;
+			font-family: $f-title;
+			font-size: 10.2rem;
+			text-wrap: nowrap;
+			@include gradient-text;
+
+			@media (max-width: 768px) {
+				text-align: center;
+				font-size: 9rem;
+			}
+		}
+
+		&_container {
+			margin-top: 3.1rem;
+			position: relative;
+			width: 63.5rem;
+			height: 3.7rem;
+
+			@media (max-width: 768px) {
+				width: 100%;
+			}
+
+			input[type='range'] {
+				-webkit-appearance: none;
+				width: 100%;
+				background: transparent;
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				height: 1rem;
+			}
+
+			input[type='range']::-webkit-slider-thumb {
+				-webkit-appearance: none;
+				border: none;
+				appearance: none;
+				width: 3.7rem;
+				height: 3.7rem;
+				background-color: $c-accent;
+				border-radius: 50%;
+				cursor: pointer;
+			}
+
+			input[type='range']::-moz-range-thumb {
+				width: 3.7rem;
+				height: 3.7rem;
+				border: none;
+				background-color: $c-accent;
+				border-radius: 50%;
+				cursor: pointer;
+			}
+		}
+
+		&_track {
+			position: absolute;
+			width: 100%;
+			height: 0.1rem;
+			background: $c-white;
+			top: 50%;
+			transform: translateY(-50%);
+			clip-path: polygon(100% 0, 0 50%, 100% 100%);
+
+			@media (max-width: 768px) {
+				height: 0.2rem;
+				clip-path: polygon(100% 0, 0 50%, 100% 100%);
+			}
+		}
+
+		&_progress {
+			position: absolute;
+			height: 1.1rem;
+			background: linear-gradient(to right, white, $c-accent);
+			top: 50%;
+			transform: translateY(-50%);
+			clip-path: polygon(100% 0, 0 50%, 100% 100%);
+		}
+	}
+
+	&__right {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		flex-direction: column;
+
+		@media (max-width: 768px) {
+			align-items: center;
+			flex-direction: column-reverse;
+		}
+	}
+
+	&__button {
+		@include btn($c-accent);
+		padding: 1.9rem 5rem;
+		margin-top: 8rem;
+	}
+
+	&__info {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 7.32rem;
+		&_item {
+			display: flex;
+			align-items: flex-start;
+			justify-content: flex-start;
+			gap: 1.7rem;
+			flex-direction: column;
+
+			h4 {
+				font-family: $f-title;
+				font-size: 2.8rem;
+
+				@media (max-width: 768px) {
+					font-size: 3.2rem;
+				}
+			}
+
+			span {
+				font-family: $f-title;
+				font-size: 6rem;
+				@include gradient-text;
+			}
+		}
+	}
+}

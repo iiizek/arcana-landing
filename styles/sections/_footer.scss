@@ -1,0 +1,27 @@
+.footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 3rem;
+	padding-inline: 22rem;
+	padding-bottom: 22rem;
+
+	@media (max-width: 768px) {
+		gap: 6.4rem;
+		padding-inline: 4rem;
+	}
+
+	p {
+		@include title;
+		font-size: 6.4rem;
+	}
+
+	a {
+		@include btn($c-accent);
+		padding: 1.9rem 3.8rem;
+	}
+
+	@media (max-width: 768px) {
+		flex-direction: column;
+	}
+}

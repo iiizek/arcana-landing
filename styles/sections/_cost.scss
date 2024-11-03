@@ -1,0 +1,108 @@
+.cost {
+	margin-bottom: 21rem;
+
+	&__title {
+		@include title;
+		margin-bottom: 6.3rem;
+	}
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: stretch;
+		gap: 4rem;
+		padding-inline: 5.3rem;
+
+		@media (max-width: 768px) {
+			gap: 6.4rem;
+			justify-content: stretch;
+			align-items: stretch;
+			flex-direction: column;
+		}
+	}
+
+	&__card {
+		flex: 1;
+		padding: 3.5rem 3.7rem;
+		display: inline-flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: flex-start;
+		background-color: $c-accent;
+		border-radius: 1.2rem;
+
+		@media (max-width: 768px) {
+			gap: 4rem;
+		}
+
+		&_img-1 {
+			align-self: center;
+			filter: drop-shadow(0 0 5rem rgba($c-white, 0.35));
+			width: 32.1rem;
+			height: 32.1rem;
+		}
+
+		&_img-2 {
+			align-self: center;
+			filter: drop-shadow(0 0 5rem rgba($c-white, 0.35));
+			width: 27.4rem;
+			height: 27.4rem;
+		}
+
+		&_img-3 {
+			align-self: center;
+			filter: drop-shadow(0 0 5rem rgba($c-white, 0.35));
+			width: 22.65rem;
+			height: 25.508rem;
+			transform: rotate(-16deg);
+		}
+
+		&_top {
+			display: flex;
+			flex-direction: column;
+			gap: 0.4rem;
+		}
+
+		&_title {
+			font-family: $f-title;
+			font-size: 3.6rem;
+			margin-bottom: 1.9rem;
+
+			@media (max-width: 768px) {
+				font-size: 4.8rem;
+			}
+		}
+
+		&_span {
+			font-size: 2rem;
+
+			@media (max-width: 768px) {
+				font-size: 3rem;
+			}
+		}
+
+		&_text {
+			font-family: $f-title;
+			font-size: 3.2rem;
+
+			@media (max-width: 768px) {
+				font-size: 4.4rem;
+			}
+		}
+
+		&_bigtext {
+			font-family: $f-title;
+			font-size: 4rem;
+
+			@media (max-width: 768px) {
+				font-size: 5rem;
+			}
+		}
+
+		&_bottom {
+			display: flex;
+			flex-direction: column;
+			gap: 1.2rem;
+		}
+	}
+}

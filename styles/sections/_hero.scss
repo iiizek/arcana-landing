@@ -1,0 +1,114 @@
+.hero {
+	height: 100dvh;
+
+	@media (max-width: 768px) {
+		height: 95dvh;
+	}
+
+	&__container {
+		margin: auto;
+		display: flex;
+		justify-content: center;
+		align-items: stretch;
+
+		@media (max-width: 768px) {
+			height: 80%;
+			align-items: center;
+			flex-direction: column;
+		}
+	}
+
+	&__illustration {
+		position: relative;
+		display: flex;
+		width: 100%;
+
+		@media (max-width: 768px) {
+			display: none;
+		}
+
+		&_image {
+			width: 42.834rem;
+			height: 73.6rem;
+			position: absolute;
+			top: 0;
+			left: 14.7rem;
+		}
+
+		&_item-1 {
+			position: absolute;
+			width: 26.454rem;
+			height: 23.305rem;
+			z-index: 1;
+			top: 29.8rem;
+			left: 1.222rem;
+			transform: rotate(-41deg);
+		}
+
+		&_item-2 {
+			position: absolute;
+			width: 13.813rem;
+			height: 12.296rem;
+			top: 8.397rem;
+			left: 46.178rem;
+			transform: rotate(-3.85deg);
+		}
+
+		&_item-3 {
+			width: 14.116rem;
+			height: 15.617rem;
+			position: absolute;
+			top: 5.9rem;
+			left: 0.234rem;
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+
+		@media (max-width: 768px) {
+			align-items: center;
+			text-align: center;
+			gap: 4rem;
+		}
+	}
+
+	&__title {
+		margin-bottom: 5.056rem;
+		text-wrap: nowrap;
+		font-family: $f-title;
+		font-size: 9rem;
+		line-height: 9.9rem;
+		@include gradient-text();
+
+		@media (max-width: 768px) {
+			font-size: 7.2rem;
+			text-wrap: wrap;
+		}
+	}
+
+	&__text {
+		font-family: $f-title;
+		font-size: 3.2rem;
+		line-height: 3.52rem;
+		margin-bottom: 6.6rem;
+
+		@media (max-width: 768px) {
+			text-wrap: wrap;
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		gap: 2.4rem;
+	}
+
+	&__button-collab {
+		@include btn($c-accent);
+	}
+
+	&__button-question {
+		@include btn($c-darkgray);
+	}
+}

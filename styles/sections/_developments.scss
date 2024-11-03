@@ -1,0 +1,92 @@
+.developments {
+	margin-bottom: 17.2rem;
+
+	&__title {
+		@include title;
+		margin-bottom: 13.1rem;
+	}
+
+	&__container {
+		display: flex;
+		justify-content: space-around;
+		align-items: stretch;
+		gap: 4.4rem;
+
+		@media (max-width: 768px) {
+			justify-content: stretch;
+			align-items: stretch;
+			gap: 6rem;
+			flex-direction: column;
+		}
+	}
+
+	&__divider {
+		width: 0.2rem;
+		background-color: $c-accent;
+
+		@media (max-width: 768px) {
+			border-radius: 1rem;
+			width: 60%;
+			margin: 0 auto;
+			height: 0.75rem;
+			margin-block: 4rem;
+		}
+	}
+
+	&__item {
+		flex: 1;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		flex-direction: column;
+
+		@media (max-width: 768px) {
+			gap: 6rem;
+		}
+
+		h3 {
+			align-self: flex-start;
+			font-family: $f-title;
+			font-size: 3.2rem;
+			color: $c-white;
+			margin-bottom: 10rem;
+
+			@media (max-width: 768px) {
+				text-align: center;
+				font-size: 4.2rem;
+			}
+		}
+
+		p {
+			text-align: start;
+			font-size: 2rem;
+
+			@media (max-width: 768px) {
+				text-align: center;
+				font-size: 3rem;
+			}
+		}
+
+		object: {
+			flex: 1;
+		}
+	}
+
+	&__img-1 {
+		width: 27rem;
+		height: 27rem;
+		margin-bottom: 5.6rem;
+	}
+
+	&__img-2 {
+		width: 23.955rem;
+		height: 22.524rem;
+		margin-bottom: 9.862rem;
+	}
+
+	&__img-3 {
+		width: 29.8rem;
+		height: 22rem;
+		margin-bottom: 10.601rem;
+	}
+}
