@@ -49,13 +49,24 @@
 			font-family: $f-title;
 			font-size: 3.2rem;
 			color: $c-white;
-			margin-bottom: 10rem;
 
 			@media (max-width: 768px) {
 				align-self: center;
 				text-align: center;
 				font-size: 4.2rem;
 			}
+		}
+
+		.pixel-perfect-kostil-1 {
+			margin-bottom: 13.61rem;
+		}
+
+		.pixel-perfect-kostil-2 {
+			margin-bottom: 10rem;
+		}
+
+		.pixel-perfect-kostil-3 {
+			margin-bottom: 9.8rem;
 		}
 
 		p {
