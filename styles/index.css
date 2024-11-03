@@ -741,6 +741,7 @@ textarea {
 }
 @media (max-width: 768px) {
   .developments__item h3 {
+    align-self: center;
     text-align: center;
     font-size: 4.2rem;
   }
