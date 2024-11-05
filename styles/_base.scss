@@ -43,14 +43,10 @@ body {
 	font-family: $f-text;
 	font-weight: 300;
 	overflow-x: hidden;
-
-	.bg-image {
-		position: absolute;
-		z-index: -100;
-		top: 0;
-		left: 0;
-		width: 100%;
-	}
+	background-image: url('../assets/bg-image.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top;
 }
 
 main {

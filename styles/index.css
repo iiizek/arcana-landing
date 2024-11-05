@@ -63,13 +63,10 @@ body {
   font-family: "SF Pro Text", sans-serif;
   font-weight: 300;
   overflow-x: hidden;
-}
-body .bg-image {
-  position: absolute;
-  z-index: -100;
-  top: 0;
-  left: 0;
-  width: 100%;
+  background-image: url("../assets/bg-image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
 }
 
 main {
@@ -342,7 +339,7 @@ textarea {
   align-items: center;
   gap: 3rem;
   padding-inline: 22rem;
-  padding-bottom: 22rem;
+  padding-bottom: 12rem;
 }
 @media (max-width: 768px) {
   .footer {
