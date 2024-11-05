@@ -390,11 +390,6 @@ textarea {
   display: flex;
   align-items: center;
 }
-@media (max-width: 768px) {
-  .hero {
-    height: 95vh;
-  }
-}
 .hero__container {
   width: 100%;
   margin: auto;
