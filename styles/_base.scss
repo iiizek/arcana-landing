@@ -15,10 +15,14 @@
 
 html {
 	scroll-behavior: smooth;
-	font-size: 0.521vw; //0.521vw = 10px = 1rem
+	font-size: 0.4168vw; //0.521vw = 10px = 1rem
 
 	@media (min-width: 2000px) {
-		font-size: 0.4vw;
+		font-size: 0.34vw;
+	}
+
+	@media (max-width: 1200px) {
+		font-size: 0.521vw;
 	}
 
 	@media (max-width: 768px) {

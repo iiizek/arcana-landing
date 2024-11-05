@@ -1,14 +1,18 @@
 .hero {
-	height: 100dvh;
+	height: 80vh;
+	margin-bottom: 10rem;
+	display: flex;
+	align-items: center;
 
 	@media (max-width: 768px) {
-		height: 95dvh;
+		height: 95vh;
 	}
 
 	&__container {
+		width: 100%;
 		margin: auto;
 		display: flex;
-		justify-content: center;
+		justify-content: space-around;
 		align-items: stretch;
 
 		@media (max-width: 768px) {
@@ -19,12 +23,17 @@
 	}
 
 	&__illustration {
-		position: relative;
 		display: flex;
 		width: 100%;
 
 		@media (max-width: 768px) {
 			display: none;
+		}
+
+		&_wrapper {
+			width: 60.532rem;
+			height: 73.6rem;
+			position: relative;
 		}
 
 		&_image {
@@ -89,7 +98,7 @@
 	}
 
 	&__text {
-		font-family: $f-title;
+		font-family: $f-text;
 		font-size: 3.2rem;
 		line-height: 3.52rem;
 		margin-bottom: 6.6rem;

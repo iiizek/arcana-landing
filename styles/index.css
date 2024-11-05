@@ -32,13 +32,18 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 0.521vw;
+  font-size: 0.4168vw;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
 }
 @media (min-width: 2000px) {
   html {
-    font-size: 0.4vw;
+    font-size: 0.34vw;
+  }
+}
+@media (max-width: 1200px) {
+  html {
+    font-size: 0.521vw;
   }
 }
 @media (max-width: 768px) {
@@ -276,6 +281,7 @@ textarea {
   background-color: rgba(11, 11, 17, 0.8);
   -webkit-backdrop-filter: blur(2.5rem);
           backdrop-filter: blur(2.5rem);
+  transform: translate3d(0, 0, 0);
   animation: dropdown 0.5s ease;
 }
 .header__dropdown_hidden {
@@ -382,17 +388,21 @@ textarea {
 }
 
 .hero {
-  height: 100dvh;
+  height: 80vh;
+  margin-bottom: 10rem;
+  display: flex;
+  align-items: center;
 }
 @media (max-width: 768px) {
   .hero {
-    height: 95dvh;
+    height: 95vh;
   }
 }
 .hero__container {
+  width: 100%;
   margin: auto;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: stretch;
 }
 @media (max-width: 768px) {
@@ -403,7 +413,6 @@ textarea {
   }
 }
 .hero__illustration {
-  position: relative;
   display: flex;
   width: 100%;
 }
@@ -411,6 +420,11 @@ textarea {
   .hero__illustration {
     display: none;
   }
+}
+.hero__illustration_wrapper {
+  width: 60.532rem;
+  height: 73.6rem;
+  position: relative;
 }
 .hero__illustration_image {
   width: 42.834rem;
@@ -471,7 +485,7 @@ textarea {
   }
 }
 .hero__text {
-  font-family: "SF Pro Display", sans-serif;
+  font-family: "SF Pro Text", sans-serif;
   font-size: 3.2rem;
   line-height: 3.52rem;
   margin-bottom: 6.6rem;
@@ -1218,7 +1232,7 @@ textarea {
 }
 @media (max-width: 768px) {
   .collaboration__content {
-    padding: 8rem 5.1rem;
+    padding: 4rem 5.1rem 8rem;
   }
 }
 .collaboration__content_slider {
@@ -1252,6 +1266,10 @@ textarea {
   text-align: center;
   font-family: "SF Pro Display", sans-serif;
   font-size: 4.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 11.4rem;
 }
 .collaboration__content_title {
   font-family: "SF Pro Display", sans-serif;
